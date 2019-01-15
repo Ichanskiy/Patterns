@@ -1,10 +1,10 @@
 package com.state;
 
-public class SoltOutState implements State{
+public class SoldOutState implements State{
 
     private GumballMachine gumballMachine;
 
-    public SoltOutState(GumballMachine gumballMachine) {
+    public SoldOutState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
 
@@ -15,6 +15,11 @@ public class SoltOutState implements State{
 
     @Override
     public void ejectQuarter() {
+
+    }
+
+    @Override
+    public void turnCrank() {
 
     }
 

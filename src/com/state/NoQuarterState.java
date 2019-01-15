@@ -19,6 +19,11 @@ public class NoQuarterState implements State{
     }
 
     @Override
+    public void turnCrank() {
+
+    }
+
+    @Override
     public void dispense() {
 
     }

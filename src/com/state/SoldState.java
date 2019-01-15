@@ -1,10 +1,10 @@
 package com.state;
 
-public class WinnerState implements State {
+public class SoldState implements State {
 
     private GumballMachine gumballMachine;
 
-    public WinnerState(GumballMachine gumballMachine) {
+    public SoldState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
 
@@ -25,18 +25,12 @@ public class WinnerState implements State {
 
     @Override
     public void dispense() {
-        System.out.println("YOU ARE A WINNER");
         gumballMachine.releaseBall();
         if (gumballMachine.getCount() > 0){
             gumballMachine.setState(gumballMachine.getSoldOutState());
         } else {
-            gumballMachine.releaseBall();
-            if (gumballMachine.getCount() > 0) {
-                gumballMachine.setState(gumballMachine.getNoQuarterState());
-            } else {
-                System.out.println("out of gumballs");
-                gumballMachine.setState(gumballMachine.getSoldOutState());
-            }
+            System.out.println("out of gumballs");
+            gumballMachine.setState(gumballMachine.getSoldOutState());
         }
     }
 }
