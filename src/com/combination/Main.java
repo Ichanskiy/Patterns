@@ -4,7 +4,6 @@ import static com.combination.QuackCounter.getNumberOfQuacks;
 
 public class Main {
 
-
     public static void main(String[] args) {
         Main main = new Main();
         AbstractDuckFactory duckFactory = new CountingDuckFactory();
