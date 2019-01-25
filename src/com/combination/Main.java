@@ -23,9 +23,9 @@ public class Main {
         flockOfDucks.add(rubberDuck);
 
         Flock flockOfMallards = new Flock();
-        flockOfMallards.add(new MallardDuck());
-        flockOfMallards.add(new MallardDuck());
-        flockOfMallards.add(new MallardDuck());
+        flockOfMallards.add(MallardDuck::new);
+        flockOfMallards.add(MallardDuck::new);
+        flockOfMallards.add(MallardDuck::new);
 
         flockOfDucks.add(flockOfMallards);
 

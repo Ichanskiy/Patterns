@@ -8,16 +8,16 @@ public class DuckFactory extends AbstractDuckFactory {
 
     @Override
     public Quackable createRedheadDuck() {
-        return new RedheadDuck();
+        return RedheadDuck::new;
     }
 
     @Override
     public Quackable createDuckCall() {
-        return new DuckCall();
+        return DuckCall::new;
     }
 
     @Override
     public Quackable createRubberDuck() {
-        return new RubberDuck();
+        return RubberDuck::new;
     }
 }
