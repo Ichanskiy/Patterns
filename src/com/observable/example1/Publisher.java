@@ -1,4 +1,4 @@
-package com.observable;
+package com.observable.example1;
 
 import java.util.ArrayList;
 import java.util.List;

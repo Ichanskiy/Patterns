@@ -1,4 +1,4 @@
-package com.observable;
+package com.observable.example1;
 
 class PublisherService extends Publisher {
 
