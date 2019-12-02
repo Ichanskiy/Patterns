@@ -10,7 +10,7 @@ public class Main {
     private static CreditBank creditBank = creditBankSupplier.get();
 
     public static void main(String[] args) {
-        Publisher publisher = new PublisherServiceImpl();
+        Publisher publisher = new PublisherService();
         publisher.subscribe(creditBank);
         publisher.subscribe(doucheBankSupplier.get());
         publisher.subscribe(privateBankSupplier.get());
