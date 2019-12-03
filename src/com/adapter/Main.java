@@ -3,8 +3,7 @@ package com.adapter;
 public class Main {
 
     public static void main(String[] args) {
-        Turkey wildTurkey = new WildTurkey();
-        TurkeyAdapter turkeyAdapter = new TurkeyAdapter(wildTurkey);
+        WildTurkeyAdapter turkeyAdapter = new WildTurkeyAdapter();
         turkeyAdapter.crack();
         turkeyAdapter.fly();
         testDuck(turkeyAdapter);
