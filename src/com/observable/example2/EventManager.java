@@ -5,8 +5,8 @@ import java.util.function.Function;
 
 public class EventManager {
 
-    private Map<String, List<EventListener>> listeners = new HashMap<>();
-    public Function<String, Integer> sizeByType = type -> listeners.get(type).size();
+    private static Map<String, List<EventListener>> listeners = new HashMap<>();
+    public static Function<String, Integer> sizeByType = type -> listeners.getOrDefault(type, new ArrayList<>()).size();
 
     public EventManager(String... types) {
         for (String type : types) {

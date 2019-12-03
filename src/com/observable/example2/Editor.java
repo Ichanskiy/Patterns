@@ -1,5 +1,7 @@
 package com.observable.example2;
 
+import static com.observable.example2.EventManager.sizeByType;
+
 public class Editor {
     private static final String CREDENTIALS = "credentials";
     private static final String PII = "PII";
@@ -17,7 +19,7 @@ public class Editor {
         eventManager.unsubscribe(PII, ageNotificationListener);
         System.out.println("removed " + ageNotificationListener.getClass().getSimpleName());
         eventManager.notifyingAll();
-        System.out.println("size of notified " + eventManager.sizeByType.apply(PII));
+        System.out.println("size of notified " + sizeByType.apply(PII));
         eventManager.notifyingByType(PII);
     }
 
